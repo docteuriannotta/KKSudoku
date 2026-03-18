@@ -53,6 +53,8 @@ self.addEventListener('fetch', event => {
   // Ignorer les requêtes non-GET et extensions Chrome
   if (event.request.method !== 'GET') return;
   if (url.protocol === 'chrome-extension:') return;
+  // MP3 : réseau direct, pas de cache (fichiers trop lourds)
+  if (url.pathname.endsWith('.mp3')) return;
 
   // Google Fonts : Cache-first (longue durée, rarement changé)
   if (url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com') {
