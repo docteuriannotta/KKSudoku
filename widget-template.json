@@ -1,0 +1,40 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Image",
+      "url": "icons/icon-96x96.png",
+      "size": "Small",
+      "horizontalAlignment": "Center"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Knight & King Sudoku",
+      "weight": "Bolder",
+      "horizontalAlignment": "Center",
+      "size": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${streak} jours de suite 🔥",
+      "horizontalAlignment": "Center",
+      "size": "Small",
+      "color": "Accent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${wins} victoires au total",
+      "horizontalAlignment": "Center",
+      "size": "Small",
+      "isSubtle": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Jouer",
+      "url": "./index.html?utm_source=widget"
+    }
+  ]
+}
